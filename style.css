@@ -1,0 +1,204 @@
+@font-face {
+  font-family: 'Apple Kid';
+  src: url('applekid.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nintendo DS BIOS';
+  src: url('Nintendo-DS-BIOS.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  cursor: url('https://raw.githubusercontent.com/Team-Obsidian/assets/main/image3.png?raw=true'),
+    default;
+  overflow: hidden;
+  margin: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  animation: fadeInAnimation ease 3s;
+}
+ 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    15% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+#linkaccepter:hover {
+  transform: rotateX(-50deg);
+}
+
+#true-viewport {
+  margin: -5vh 0vw;
+  padding: 5vh 20%;
+  width: auto;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  overflow-wrap: anywhere;
+  background-image: url("https://github.com/Team-Obsidian/website-2/raw/main/img/background/bg6.png");
+  /*backdrop-filter: ;*/
+  background-clip: border-box;
+  background-repeat: repeat;
+/*  transition: transform 1s; */
+
+/*  transform: rotateX(20deg); */
+}
+
+  .slightwobble {
+    animation:wobblex 5s ease-in-out infinite;
+  }
+
+  #true-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  font-family: Nintendo DS BIOS;
+  color: white;
+  font-size: 2em;
+}
+
+h1 {
+  color: white;
+}
+
+#enableblock {
+  height: 100%;
+  width: 100%;
+  background-image: url("https://raw.githubusercontent.com/Team-Obsidian/assets/091dca200f48333efb7984099f376cd3c7d894c6/scanline2.gif");
+  background-repeat: repeat;
+  opacity: 0.5;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 9;
+  pointer-events: none;
+}
+
+#imagefocus {
+  height: 100%;
+  width: 100%;
+background: radial-gradient(circle, rgba(255,255,255,0) 20%, rgba(0,0,0,0.7245273109243697) 100%);
+  opacity: 0.8;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+#enableblock {
+  height: 100%;
+  width: 100%;
+  background-image: url("https://raw.githubusercontent.com/Team-Obsidian/assets/091dca200f48333efb7984099f376cd3c7d894c6/scanline2.gif");
+  background-repeat: repeat;
+  opacity: 0.5;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 9;
+  pointer-events: none;
+}
+
+#bordertest {
+  height: 100%;
+  width: 100%;
+  background: url("https://github.com/Team-Obsidian/assets/raw/main/omori-border/border_fear_handheld.png") no-repeat center center;
+  background-size: cover;
+  /*opacity: 0.5;*/
+  opacity: 1.0;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 12;
+  pointer-events: none;
+}
+
+#transitionoverlay {
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(1px);
+  opacity: 0;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 4;
+  pointer-events: none;
+  transition: opacity 1s;
+}
+
+#userInput {
+  width: 50%;
+  margin: auto;
+  transition: height 1.5s, width 1s, font-size 1.5s, border-width 2s, color 1s;
+  height: 0;
+  text-align: center;
+  font-size: 1em;
+  background: transparent;
+  border-width: 0.5em;
+  border-color: white;
+  color:black;
+  font-family: Nintendo DS BIOS;
+  display: block;
+  z-index: 5;
+}
+
+#userInput:focus {
+  background: url("https://github.com/Team-Obsidian/assets/raw/main/deltarunebattlebg.gif");
+  transition: height 1.5s, width 1s, font-size 1.5s, border-width 2s, color 1s;
+  height: 2em;
+  width: 100%;
+  border-width: 2px;
+  color:white;
+  font-family: Nintendo DS BIOS;
+  font-size: 3em;
+  z-index: 15;
+}
+
+#testimage {
+  width: 100%;
+}
+
+
+
+#testimagecontainer {
+  margin: auto;
+  width: 20%;
+}
+
+.blur-less {
+  -webkit-animation: blur-less 3s infinite;
+}
+
+@-webkit-keyframes blur-less {
+  0%, 100%  { -webkit-filter: blur(0px); }
+  50% { -webkit-filter: blur(3px); }
+}
+
+@keyframes wobblex {
+  0%   {transform: skew(2deg);}
+  /*25%  {transform: skew(5deg);}*/
+  50%  {transform: skew(-2deg);}
+  /*75%  {transform: skew(-5deg);}*/
+  100% {transform: skew(2deg);}
+}
+
