@@ -8,6 +8,12 @@ var testdata=""
   // The page is not in an iframe
 //}
 
+//$("button").addClass("animated bounce");
+//$("button").removeClass("btn-default");
+$(document).ready(function() {
+  
+  });
+
 function windowelement() {
   document.getElementById('testline').innerHTML = window.parent.location + " a a a" + window.location.href;
 }
@@ -28,12 +34,14 @@ function blureverything() {
   document.getElementById('transitionoverlay').style.opacity = "0.7";
   document.getElementById('testimagecontainer').style.zIndex = "20";
   document.getElementById('enableblock').style.zIndex = "5";
+
 }
 
 function unblureverything() {
   document.getElementById('transitionoverlay').style.opacity = "0";
   document.getElementById('testimagecontainer').style.zIndex = "2";
   document.getElementById('enableblock').style.zIndex = "9";
+
 }
 
 function checkpassword() {
@@ -87,4 +95,17 @@ function PasteButton() {
 document.addEventListener('paste', e=>{
     PasteData = (e.clipboardData || window.clipboardData).getData('text/plain');
 })
+
+function blurpx(element, amnt) {
+//element: id of element affected
+//amnt: amount of pixels it's affected by
+  document.getElementById(element).style.filter = "blur(" + amnt + "px)";
+  $("#enableblock").css({"opacity": "0.3"});
+}
+
+
+function clearfilter(element) {
+  document.getElementById(element).style.filter = "";
+  $("#enableblock").css({"opacity": "0"});
+}
 

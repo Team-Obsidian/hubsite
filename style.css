@@ -47,9 +47,11 @@ body {
 }
 
 #true-viewport {
-  margin: -5vh 0vw;
-  padding: 5vh 20%;
-  width: auto;
+  margin: auto;
+  padding: 0 10%;
+  min-width: 720px;
+  width: 50vw;
+  max-width: 1280px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -84,9 +86,10 @@ h1 {
 #enableblock {
   height: 100%;
   width: 100%;
-  background-image: url("https://raw.githubusercontent.com/Team-Obsidian/assets/091dca200f48333efb7984099f376cd3c7d894c6/scanline2.gif");
+  background-image: url("https://raw.githubusercontent.com/Team-Obsidian/website-2/main/img/background/tvstatic.gif");
   background-repeat: repeat;
-  opacity: 0.5;
+  opacity: 0;
+  transition: opacity 0.5s;
   position: absolute;
   top: 0%;
   left: 0%;
@@ -106,18 +109,7 @@ background: radial-gradient(circle, rgba(255,255,255,0) 20%, rgba(0,0,0,0.724527
   pointer-events: none;
 }
 
-#enableblock {
-  height: 100%;
-  width: 100%;
-  background-image: url("https://raw.githubusercontent.com/Team-Obsidian/assets/091dca200f48333efb7984099f376cd3c7d894c6/scanline2.gif");
-  background-repeat: repeat;
-  opacity: 0.5;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  z-index: 9;
-  pointer-events: none;
-}
+
 
 #bordertest {
   height: 100%;
@@ -183,15 +175,6 @@ background: radial-gradient(circle, rgba(255,255,255,0) 20%, rgba(0,0,0,0.724527
 #testimagecontainer {
   margin: auto;
   width: 20%;
-}
-
-.blur-less {
-  -webkit-animation: blur-less 3s infinite;
-}
-
-@-webkit-keyframes blur-less {
-  0%, 100%  { -webkit-filter: blur(0px); }
-  50% { -webkit-filter: blur(3px); }
 }
 
 @keyframes wobblex {
