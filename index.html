@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta id="redirect">
+  <meta id="metaid">
   <title>hubsite</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="crt.css" rel="stylesheet" type="text/css" />
@@ -20,14 +20,16 @@
     <div class="scanline"></div>
     <div class="slightwobble bgtilescroll1" id="true-viewport" onmouseover="clearfilter('true-viewport')" onmouseout="blurpx('true-viewport', 1)">
     <form autocomplete="off">
-      <input type="text" onpaste="SiteRedirect()" id="userInput" 
+      <input type="text" onpaste="checkpassword()" id="userInput" 
  onfocus="blureverything()" onfocusout="unblureverything()"/>
     </form>
 
-      <div id="testimagecontainer">  <img id="testimage" src="https://github.com/Team-Obsidian/website-2/blob/main/img/icon/forestbunny.gif?raw=true"/></div>
+      <div id="testimagecontainer"><!--<a id="linkaccepter">--><img id="testimage" onclick="checkpassword2()"  src="https://github.com/Team-Obsidian/website-2/blob/main/img/icon/forestbunny.gif?raw=true"/><!--</a>--></div>
 
       <div id="buttonfield">
     <button onclick="checkpassword()">Apply</button>
+    <button onclick="changeyoutube()">Video Embed</button>
+        <button onclick="checkpassword2()">Apply2</button>
     
     <a href="https://ds.44670.org">
     <button onclick= >Nintendo DS</button>
