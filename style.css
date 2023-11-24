@@ -1,3 +1,7 @@
+:root {
+  --cursor-normal: url('https://raw.githubusercontent.com/Team-Obsidian/assets/main/image3.png?raw=true'),
+}
+
 @font-face {
   font-family: 'Apple Kid';
   src: url('applekid.ttf')
@@ -16,18 +20,22 @@
   font-display: swap;
 }
 
+.dropblue {
+  filter: drop-shadow(10px 10px 0px #fff);
+}
+
 html {
-  cursor: url('https://raw.githubusercontent.com/Team-Obsidian/assets/main/image3.png?raw=true'),
-    default;
   overflow: hidden;
   margin: none;
+  filter: invert(100%);
+  transition: filter .5s;
 }
 
 body {
   width: 100%;
   height: 100%;
   margin: 0;
-  animation: fadeInAnimation ease 3s;
+  animation: fadeInAnimation ease 1s;
 }
  
 @keyframes fadeInAnimation {
@@ -56,10 +64,11 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   overflow-wrap: anywhere;
-  background-image: url("https://github.com/Team-Obsidian/website-2/raw/main/img/background/bg6.png");
+  background-image: url("https://github.com/Team-Obsidian/website-2/raw/main/img/background/bg5.png");
   /*backdrop-filter: ;*/
   background-clip: border-box;
   background-repeat: repeat;
+  cursor: var(--cursor-normal) default;
 /*  transition: transform 1s; */
 
 /*  transform: rotateX(20deg); */
@@ -88,7 +97,7 @@ h1 {
   width: 100%;
   background-image: url("https://raw.githubusercontent.com/Team-Obsidian/website-2/main/img/background/tvstatic.gif");
   background-repeat: repeat;
-  opacity: 0;
+  opacity: 0.1;
   transition: opacity 0.5s;
   position: absolute;
   top: 0%;
@@ -112,16 +121,16 @@ background: radial-gradient(circle, rgba(255,255,255,0) 20%, rgba(0,0,0,0.724527
 
 
 #bordertest {
-  height: 100%;
   width: 100%;
-  background: url("https://github.com/Team-Obsidian/assets/raw/main/omori-border/border_fear_handheld.png") no-repeat center center;
+  height: 100%;
+  background: url("https://github.com/Team-Obsidian/assets/raw/main/omori-border/border_omori.png") no-repeat center center;
   background-size: cover;
   /*opacity: 0.5;*/
   opacity: 1.0;
   position: absolute;
   top: 0%;
   left: 0%;
-  z-index: 12;
+  z-index: 1;
   pointer-events: none;
 }
 
@@ -185,3 +194,47 @@ background: radial-gradient(circle, rgba(255,255,255,0) 20%, rgba(0,0,0,0.724527
   100% {transform: skew(2deg);}
 }
 
+.editable {
+    display:inline-block;
+    border: solid 1px #000;
+    min-height: 200px;
+    width: 100%;
+    color: white;
+}
+/*
+#embedobject {
+  width: 300px;
+  aspect-ratio: 1/1;
+  background-color: green;
+
+}
+
+#handlebar {
+  width: 100%;
+  height: 20%;
+  background-color: blue;
+  position: relative;
+  top: 0%;
+  left: 0%;
+
+}
+
+#embed {
+  width: 100%;
+  height: 80%;
+
+}
+*/
+.draggable {
+  width: 140px;
+  height: 140px;
+  background: #09F;
+  border-radius: 10px;
+  cursor: move;
+  z-index: 99;
+}
+.draggable.is-pointer-down {
+
+  background: #F90;
+}
+.draggable.is-dragging { opacity: 0.7; }

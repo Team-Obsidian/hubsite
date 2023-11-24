@@ -2,6 +2,17 @@ var PasteData=""
 var origin=""
 var testdata=""
 
+
+var effect=""
+// 0 - None
+// 1 - CRT
+// 2 - Static
+// 3 - CRT+Static
+// 4 - Focuspp
+
+
+//[if url embed doesn't work, create a fun 404 error]
+
 //if ( window.location !== window.parent.location ) {
   // The page is in an iframe
 //} else {
@@ -11,6 +22,17 @@ var testdata=""
 //$("button").addClass("animated bounce");
 //$("button").removeClass("btn-default");
 $(document).ready(function() {
+  
+  //load the notepad by fetching the localstorage
+  if (localStorage.getItem("notepad")!=null) {
+    document.getElementById("notepad").innerHTML = localStorage.getItem("notepad")
+  }
+  // Store
+
+
+  // Retrieve
+
+
   
   });
 
@@ -106,6 +128,12 @@ function blurpx(element, amnt) {
 
 function clearfilter(element) {
   document.getElementById(element).style.filter = "";
-  $("#enableblock").css({"opacity": "0"});
+  $("#enableblock").css({"opacity": "0.1"});
+}
+
+function saveNotepad() {
+  localStorage.setItem("notepad", document.getElementById("notepad").innerHTML);
+  console.log("innerHTML is: " + localStorage.getItem("notepad"));
+  console.log("notepad is: " + document.getElementById("notepad").innerHTML);
 }
 
